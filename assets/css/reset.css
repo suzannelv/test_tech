@@ -18,13 +18,28 @@ img {
 }
 
 
-
 /* header navigateur */
-header .logo{
-  width: 12vw;
-  height: 8vw;
+nav .logo{
+  width: 13vw;
+  height: 6vw;
 }
 
+nav .userName{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+nav .userName .nameBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+nav .userName .nameBlock span {
+  font-size: 14px;
+  font-weight: 900;
+  text-align: right;
+}
 
 /* main -> left sideBar */
 #contenu .sideBar {
@@ -38,8 +53,13 @@ header .logo{
   font-weight:bolder;
 }
 
+#contenu h5{
+  font-weight: 900;
+}
+
 #contenu .sideBar .toggle-list{
   margin-left:-13px;
+  font-weight: 900;
 }
 
 #contenu .sideBar h5, a {
@@ -64,7 +84,7 @@ header .logo{
 
 #contenu-right .title {
   background: linear-gradient(var(--linear-bgColor));
-  min-height: 20%;
+  min-height: 15%;
 }
 
 #contenu-right h1{
@@ -93,7 +113,7 @@ header .logo{
   align-items: center;
   justify-content: center;
   margin:0;
-  font-weight: 700;
+  font-weight: 900;
 }
 
 #contenu-right .add-patient, .patient-wait{
@@ -141,11 +161,15 @@ header .logo{
   color:var(--primary-color);
   font-weight: 900;
 }
-.search small{
+
+.search .desc{
+  width: 250px;
+  font-size: 14px;
   color:#757575;
 }
 .search button{
   font-size: 16px;
+  font-weight: 900;
   border: 1px solid #DDDDDD;
   border-radius: 40px;
   width:40%;
@@ -159,37 +183,37 @@ header .logo{
   height:1px;
   background-color:#E0E0E0;
 }
+
 .max-separator{
   margin: 80px auto;
 }
 
-/* contenu-> right: info détaillée */
-
 .min-separator{
   margin: 10px auto;
 }
+
+/* contenu-> right: info détaillée */
 #persons{
  margin-top:-50px;
- margin-bottom: 200px;
+ margin-bottom: 35%;
 }
 
 #persons .avatar-patient{
   transform: translateY(20%);
 }
-.card-info:nth-child(odd){
+
+.card-info {
+  width:280px;
+  height:340px;
+  border-radius: 10px;
+}
+
+.card-info.odd{
   background-color: var(--avatar-bgColor);
 }
 
-.card-info:nth-child(even){
+.card-info.even{
    border: 2px solid var(--primary-color);
-}
-
-
-.card-info {
- 
-  width:250px;
-  height:300px;
-  border-radius: 10px;
 }
 
 .card-info .top h6{
@@ -217,8 +241,17 @@ header .logo{
   font-weight: bolder;
 }
 
+.card-info .base{
+  width:190px;
+  height:160px;
+}
+.card-info .base p{
+  font-weight: 900;
 
-/* tabbar affiche quand l'écran devient petit */
+} 
+
+
+/* tabbar affiche en bas quand l'écran devient petit */
 #tabbar{
   background-color: var(--primary-color);
 }
@@ -236,12 +269,12 @@ header .logo{
 }
 
 #tabbar .right h2{
-  font-size: 1.3rem;
+  font-size: 24px;
   font-weight: 900;
 }
 
 #tabber .right p{
-  font-weight: .2rem;
+  font-weight: 700;
 }
 
 
