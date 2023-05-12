@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./assets/css/index.css">
+  <title>Test site Polo</title>
+</head>
+<body>
+
+<!-- header navigateur -->
+  <nav class="navbar">
+    <div class="container-fluid d-flex justify-content-bewteen">
+      <!-- logo à gauche -->
+      <div class="logo">
+        <img src="./assets/img/logo.png" alt="logo polo" >
+      </div>
+
+      <!-- user login icon à droite -->
+      <div class="d-flex flex-row align-items-center">
+        <div class="fw-bold me-2 d-none d-md-block">Lola Dufour</div>
+        <div class="me-2">
+          <img src="./assets/img/avatars/Avatar Infirmier.png" alt="infirmier">
+        </div>
+        <div class="d-none d-md-block">
+          <img src="./assets/img/icons/Vector (Stroke bas).png" alt="flèche" class="pt-2">
+        </div>
+      </div>
+    </div>
+  </nav>
+
+
+
+
+<!-- main contenu -->
+
+<main id="contenu" class="container-fluid d-flex">
+
+    <div class="row g-0">  
+      
+      <!-- main left : sidebar -->
+      <div class="sideBar col-2 d-none d-md-block pt-5 ps-5 position-relative">
+        <a href="#"><h5 class="mb-4">Accueil</h5></a>
+        <a href="#"><h5 class="mb-4">Mes ordonnances</h5></a>
+      
+        <ul class="nav flex-column">
+          <!-- premier balise <li> avec le menu déroulant -->
+          <li class="d-flex flex-column align-items-start sideBar-item mb-4">
+            <div class="d-flex flex-row align-items-center">
+              <div class="pt-2">
+                <img src="./assets/img/icons/Picto Connexion.png" alt="icon connextion">
+              </div>
+            
+              <a href="#" class="mx-2"><h5 class="toggle-title">Mes patients</h5></a>
+
+              <a class="btn d-inline-flex align-items-center collapsed"    
+                 data-bs-toggle="collapse" 
+                 data-bs-target="#list-collapse" 
+                 aria-expanded="true" 
+                 onclick="toggleArrow()">
+                <img src="./assets/img/icons/arrow-bas.png" alt="flèche bas" id="arrow-open" >
+                <img src="./assets/img/icons/arrow-top.png" alt="flèche top" id="arrow-close" class="d-none">
+              </a>
+            </div>
+
+            <div class="collapse" id="list-collapse">
+              <ul class="toggle-list text-white py-1">
+                <li>Tous les patients</li>
+                <li>Patients en attente</li>
+                <li>Patients archivés</li>
+              </ul>
+            </div>
+          </li>
+
+          <!--deuxième <li>  -->
+          <li class="sideBar-item mb-4">
+            <a href="#"><h5>Mes pharmacies</h5></a>
+          </li>
+
+          <!--troisième <li>  -->
+          <li class="sideBar-item d-flex flex-row mb-4">
+            <a href="#"><h5>Mes documents</h5></a>
+            <div>
+              <img src="./assets/img/icons/arrow-bas.png" alt="icon flèche" class="mt-2 ms-3">
+            </div>
+          </li>
+
+          <!--quatrième <li>  -->
+          <li class="sideBar-item mb-4">
+            <a href="#"><h5>Mes Pilbeez</h5></a>
+          </li>
+
+          <!--cinquième <li>  -->
+          <li class="sideBar-item">
+            <a href="#"><h5>Parrainer un cabinet</h5></a>
+          </li>
+        </ul>
+
+
+        <div class="contact">
+          <div class="mx-4">
+            <img src="./assets/img/icons/contact_tel.png" alt="contact par téléphone">
+          </div>
+          <div >
+            <img src="./assets/img/icons/contact_mail.png" alt="contact par email">
+          </div>
+        </div>
+      </div>
+ 
+      <!-- main right : contenu principal-->
+      <div id="contenu-right" class="col text-center">
+        <!-- partie les patients du cabinet -->
+        <div class="title position-relative">
+          <h1 class="pt-5">Les patients du cabinet</h1>
+
+          <div class="d-flex justify-content-around flex-wrap my-4">
+            <div class="gestion-item add-patient">
+              <div class="icon">
+                <img src="./assets/img/icons/Picto ajout patient.png" alt="ajouter patient">
+              </div> 
+              <p>Ajouter un patient</p>
+            </div>
+  
+            <div class="gestion-item patient-wait">
+              <div class="icon">
+                <img src="./assets/img/icons/Picto patient attente.png" alt="patients en attente" >
+              </div>
+              <p>Patients en attente</p>
+            </div>  
+  
+            <div class="gestion-item patient-archive">
+              <div class="icon">
+                <img src="./assets/img/icons/folder.png" alt="patients archivés" >
+              </div>
+              <p>Patients archivés</p>
+            </div>     
+  
+            <div class="gestion-item aidant">
+              <div class="icon">
+                <img src="./assets/img/icons/Shape 1.png" alt="voir les aidants" >
+              </div>
+              <p>Voir les aidants</p>
+            </div>
+  
+          </div>
+
+          <div class="triangle"></div>
+        </div>
+
+        <!-- partie de recherche -->
+        <div class="search row d-flex flex-row align-items-start my-5">
+           <div class="glass d-none d-lg-block">
+             <img src="./assets/img/loupe.png" alt="icon de recherche">
+           </div>
+           
+           <div class="fonction-search d-flex flex-column align-items-center justify-content-center">
+             <h3>Rechercher un patient</h3>
+             <small class="my-3">Entrez les premières lettres de nom du patient que vous recherchez.</small>
+             <button class="btn fw-bolder">Koscians!</button>
+           </div>
+        </div>    
+
+        <!-- ligne de séparation -->
+        <div class="separator max-separator"></div> 
+
+        <!-- partie sur les cartes des patients -->
+        <div id="persons" class="container d-flex flex-wrap justify-content-center">
+          
+        </div>
+      </div>
+    </div>
+</main>
+
+
+<!-- tabbar affiche sur le petit écran-->
+<div id="tabbar" class="d-block d-md-none d-flex mt-5">
+  <div class="left mx-3 align-self-center">
+    <img src="./assets/img/icons/btn.png" alt="toggle buton">
+  </div>
+
+  <div class="center flex-fill"></div>
+
+  <div class="right">
+    <h2 class="text-white mt-2">1740</h2>
+    <p class="text-black fw-bolder">points</p>
+  </div>
+ 
+</div>
+  
+
+
+
+
+  <script src="./assets/js/bootstrap.bundle.min.js"></script>
+  <script src="./assets/js/index.js"></script>
+  <script src="./assets/js/arrow.js"></script>
+</body>
+</html>

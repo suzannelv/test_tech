@@ -1,0 +1,249 @@
+@import "./common.css";
+
+body, h1, h2, h3, h4, h5, h6 {
+  padding:0;
+  margin:0;
+}
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+
+
+/* header navigateur */
+header .logo{
+  width: 12vw;
+  height: 8vw;
+}
+
+
+/* main -> left sideBar */
+#contenu .sideBar {
+  width: 280px;
+  height: 100%;
+  background-color: var(--primary-color);
+}
+
+#contenu .sidebar .sideBar-item{
+  font-size: 16px;
+  font-weight:bolder;
+}
+
+#contenu .sideBar .toggle-list{
+  margin-left:-13px;
+}
+
+#contenu .sideBar h5, a {
+  color:#fff;
+}
+
+#contenu .sideBar .contact {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position:absolute;
+  left:0;
+  bottom:30px;
+  width:139px;
+  height: 60px;
+  border-radius: 0 100px 100px 0;
+  background-color: #fff;
+}
+
+
+/* main -> contenu right */
+
+#contenu-right .title {
+  background: linear-gradient(var(--linear-bgColor));
+  min-height: 20%;
+}
+
+#contenu-right h1{
+  font-size: 40px;
+  font-weight: 900;
+}
+
+#contenu-right .gestion-item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin:15px 0;
+  width: 230px;
+  height: 70px;
+  border-radius:100px;
+}
+#contenu-right .icon {
+  align-items: center;
+  margin-right: 5px;
+}
+
+#contenu-right .gestion-item p{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+  font-weight: 700;
+}
+
+#contenu-right .add-patient, .patient-wait{
+  background-color: var(--primary-color);
+  color:#fff;
+}
+
+#contenu-right .patient-archive, .aidant{
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+}
+
+#contenu-right .triangle {
+  position:absolute;
+  bottom:0;
+  left:50%;
+  transform: translateX(-50%) translateY(100%);
+  width:0;
+  height:0;
+  border-left: 50px solid transparent; 
+  border-right: 50px solid transparent; 
+  border-top: 30px solid #F9F9F9; 
+}
+
+
+/* main->rignt->partie de recherche */
+
+.search{
+  position: relative;
+}
+.search .glass{
+  position:absolute;
+  left: -35%;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-right: 20px;
+}
+
+.search .glass img{
+  width: 10vw;
+  height:10vw;
+}
+
+.search h3{
+  color:var(--primary-color);
+  font-weight: 900;
+}
+.search small{
+  color:#757575;
+}
+.search button{
+  font-size: 16px;
+  border: 1px solid #DDDDDD;
+  border-radius: 40px;
+  width:40%;
+  height: 60px ;
+}
+
+/* ligne de séparation  */
+
+.separator{
+  width: 80%;
+  height:1px;
+  background-color:#E0E0E0;
+}
+.max-separator{
+  margin: 80px auto;
+}
+
+/* contenu-> right: info détaillée */
+
+.min-separator{
+  margin: 10px auto;
+}
+#persons{
+ margin-top:-50px;
+ margin-bottom: 200px;
+}
+
+#persons .avatar-patient{
+  transform: translateY(20%);
+}
+.card-info:nth-child(odd){
+  background-color: var(--avatar-bgColor);
+}
+
+.card-info:nth-child(even){
+   border: 2px solid var(--primary-color);
+}
+
+
+.card-info {
+ 
+  width:250px;
+  height:300px;
+  border-radius: 10px;
+}
+
+.card-info .top h6{
+  font-size: 16px;
+  font-weight: bolder;
+  color:var(--primary-color);
+  margin-top: 50px;
+}
+
+.card-info .top .age {
+  font-size: 14px;
+}
+
+.card-info .base .info {
+  display: flex;
+  flex-direction: row;
+}
+
+.card-info .base .icon {
+  margin-right: 10px;
+}
+
+.card-info .base p{
+  font-size: 14px;
+  font-weight: bolder;
+}
+
+
+/* tabbar affiche quand l'écran devient petit */
+#tabbar{
+  background-color: var(--primary-color);
+}
+
+#tabbar .center{
+  border-left: 1px solid #fff;
+}
+
+#tabbar .right{
+  text-align: center;
+  line-height: 100%;
+  vertical-align: middle;
+  background-color: #FFD900;
+  width: 15%;
+}
+
+#tabbar .right h2{
+  font-size: 1.3rem;
+  font-weight: 900;
+}
+
+#tabber .right p{
+  font-weight: .2rem;
+}
+
+
+
+
