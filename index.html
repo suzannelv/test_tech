@@ -14,7 +14,7 @@
     <div class="container d-flex justify-content-bewteen">
       <!-- logo à gauche -->
       <div >
-        <img src="assets/img/logo.png" alt="logo polo" class="logo">
+        <img src="assets/img/logo.svg" alt="logo polo" class="logo">
       </div>
 
       <!-- user login icon à droite -->
@@ -28,10 +28,10 @@
         </div>
 
         <div class="mx-2">
-          <img src="assets/img/avatars/avatar_infirmier.png" alt="infirmier">
+          <img src="assets/img/avatars/avatar-infirmier.svg" alt="infirmier">
         </div>
         <div class="d-none d-md-block">
-          <img src="assets/img/icons/arrow-down.png" alt="flèche" class="pt-2">
+          <img src="assets/img/icons/arrow-down.svg" alt="flèche" class="pt-2">
         </div>
       </div>
     </div>
@@ -45,7 +45,7 @@
     <div class="row g-0">  
       
       <!-- main left : sidebar -->
-      <div class="sideBar col-2 d-none d-md-block pt-5 ps-5 position-relative">
+      <div class="sideBar col-2 d-none d-md-block pt-5 ps-4 position-relative">
         <a href="#"><h5 class="mb-4">Accueil</h5></a>
         <a href="#"><h5 class="mb-4">Mes ordonnances</h5></a>
       
@@ -54,7 +54,7 @@
           <li class="d-flex flex-column align-items-start sideBar-item mb-4">
             <div class="d-flex flex-row align-items-center">
               <div class="pt-2">
-                <img src="assets/img/icons/patients.png" alt="icon connextion">
+                <img src="assets/img/icons/patients.svg" alt="icon connextion">
               </div>
             
               <a href="#" class="mx-2"><h5 class="toggle-title me-1">Mes patients</h5></a>
@@ -65,8 +65,8 @@
                  data-bs-target="#list-collapse" 
                  aria-expanded="true" 
                  onclick="toggleArrow()">
-                <img src="assets/img/icons/arrow-bas.png" alt="flèche bas" id="arrow-open" >
-                <img src="assets/img/icons/arrow-top.png" alt="flèche top" id="arrow-close" class="d-none">
+                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" >
+                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="arrow-close" class="d-none">
               </a>
             </div>
 
@@ -88,7 +88,7 @@
           <li class="sideBar-item d-flex flex-row mb-4">
             <a href="#"><h5>Mes documents</h5></a>
             <div>
-              <img src="assets/img/icons/arrow-bas.png" alt="icon flèche" class="mt-2 ms-3">
+              <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3">
             </div>
           </li>
 
@@ -106,10 +106,10 @@
 
         <div class="contact">
           <div class="mx-4">
-            <img src="assets/img/icons/contact_tel.png" alt="contact par téléphone">
+            <img src="assets/img/icons/contact-tel.svg" alt="contact par téléphone">
           </div>
           <div >
-            <img src="assets/img/icons/contact_mail.png" alt="contact par email">
+            <img src="assets/img/icons/contact-mail.svg" alt="contact par email">
           </div>
         </div>
       </div>
@@ -123,28 +123,28 @@
           <div class="d-flex justify-content-center flex-wrap my-4">
             <div class="gestion-item add-patient">
               <div class="icon">
-                <img src="assets/img/icons/ajout_patient.png" alt="ajouter patient">
+                <img src="assets/img/icons/ajout-patient.svg" alt="ajouter patient">
               </div> 
               <p>Ajouter un patient</p>
             </div>
   
             <div class="gestion-item patient-wait mx-2">
               <div class="icon">
-                <img src="assets/img/icons/patient_attente.png" alt="patients en attente" >
+                <img src="assets/img/icons/patient-attente.svg" alt="patients en attente" >
               </div>
               <p>Patients en attente</p>
             </div>  
   
             <div class="gestion-item patient-archive">
               <div class="icon">
-                <img src="assets/img/icons/folder.png" alt="patients archivés" >
+                <img src="assets/img/icons/folder.svg" alt="patients archivés" >
               </div>
               <p>Patients archivés</p>
             </div>     
   
             <div class="gestion-item aidant ms-2">
               <div class="icon">
-                <img src="assets/img/icons/hand.png" alt="voir les aidants" >
+                <img src="assets/img/icons/hand.svg" alt="voir les aidants" >
               </div>
               <p>Voir les aidants</p>
             </div>
@@ -157,18 +157,20 @@
         <!-- partie de recherche -->
         <div class="search row d-flex flex-row align-items-start my-5">
            <div class="glass d-none d-lg-block">
-             <img src="assets/img/loupe.png" alt="icon de recherche">
+             <img src="assets/img/loupe.svg" alt="icon de recherche">
            </div>
            
            <div class="fonction-search d-flex flex-column align-items-center justify-content-center">
-             <h3>Rechercher un patient</h3>
+             <h2>Rechercher un patient</h2>
              <div class="my-3 desc">
               <small >Entrez les premières lettres de nom du patient que vous recherchez.</small>
              </div>
-             
-             <button class="btn">Koscians!</button>
+             <div class="input-group">
+               <input type="text" class="text-center mx-auto" id="patientNameInput" placeholder="Koscians!" aria-label="saisir le nom de patient"/>
+             </div>    
            </div>
         </div>    
+
 
         <!-- ligne de séparation -->
         <div class="separator max-separator"></div> 
@@ -185,14 +187,14 @@
 <!-- tabbar affiche sur le petit écran-->
 <div id="tabbar" class="d-block d-md-none d-flex mt-5">
   <div class="left mx-3 align-self-center">
-    <img src="assets/img/icons/btn.png" alt="toggle buton">
+    <img src="assets/img/icons/btn.svg" alt="toggle buton">
   </div>
 
   <div class="center flex-fill"></div>
 
   <div class="right">
-    <h2 class="text-white mt-2">1740</h2>
-    <p class="text-black fw-bolder">points</p>
+    <p class="text-white mt-2 chiffre">1740</p>
+    <p class="text-black fw-bolder point">points</p>
   </div>
 </div>
   

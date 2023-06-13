@@ -42,6 +42,9 @@ nav .userName .nameBlock span {
 }
 
 /* main -> left sideBar */
+#contenu {
+  margin: 0;
+}
 #contenu .sideBar {
   width: 280px;
   height: 100%;
@@ -106,6 +109,7 @@ nav .userName .nameBlock span {
 #contenu-right .icon {
   align-items: center;
   margin-right: 5px;
+
 }
 
 #contenu-right .gestion-item p{
@@ -116,14 +120,14 @@ nav .userName .nameBlock span {
   font-weight: 900;
 }
 
-#contenu-right .add-patient, .patient-wait{
-  background-color: var(--primary-color);
-  color:#fff;
-}
-
-#contenu-right .patient-archive, .aidant{
+ #contenu-right .gestion-item{
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
+} 
+
+#contenu-right .gestion-item:hover{
+  background-color: var(--primary-color);
+  color:#fff;
 }
 
 #contenu-right .triangle {
@@ -157,7 +161,7 @@ nav .userName .nameBlock span {
   height:10vw;
 }
 
-.search h3{
+.search h2{
   color:var(--primary-color);
   font-weight: 900;
 }
@@ -167,7 +171,7 @@ nav .userName .nameBlock span {
   font-size: 14px;
   color:#757575;
 }
-.search button{
+.search input{
   font-size: 16px;
   font-weight: 900;
   border: 1px solid #DDDDDD;
@@ -268,12 +272,12 @@ nav .userName .nameBlock span {
   width: 15%;
 }
 
-#tabbar .right h2{
+#tabbar .right .chiffre{
   font-size: 24px;
   font-weight: 900;
 }
 
-#tabber .right p{
+#tabber .right .point{
   font-weight: 700;
 }
 
