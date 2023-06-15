@@ -11,6 +11,13 @@ ul, li {
 
 a {
   text-decoration: none;
+  cursor: pointer;
+}
+
+a:hover,
+a:hover h3 {
+  color:#FFD900 !important;
+  transform: scale(1.1);
 }
 
 img {
@@ -19,12 +26,12 @@ img {
 
 
 /* header navigateur */
-nav .logo{
+nav .logo {
   width: 13vw;
   height: 6vw;
 }
 
-nav .userName{
+nav .userName {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -44,6 +51,7 @@ nav .userName .nameBlock span {
 /* main -> left sideBar */
 #contenu {
   margin: 0;
+  max-width: 100%;
 }
 #contenu .sideBar {
   width: 280px;
@@ -51,25 +59,29 @@ nav .userName .nameBlock span {
   background-color: var(--primary-color);
 }
 
-#contenu .sidebar .sideBar-item{
+#contenu .sidebar .sideBar-item {
   font-size: 16px;
   font-weight:bolder;
 }
 
-#contenu h5{
+#contenu h3 {
+  font-size: 18px;
   font-weight: 900;
 }
 
-#contenu .sideBar .toggle-list{
+#contenu .sideBar .toggle-list {
   margin-left:-13px;
-  font-weight: 900;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 2.5;
 }
 
-#contenu .sideBar h5, a {
+#contenu .sideBar h3, a {
   color:#fff;
 }
 
-#contenu .sideBar .contact {
+#contenu .sideBar .contact,
+.tabbar-contact {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -82,6 +94,29 @@ nav .userName .nameBlock span {
   background-color: #fff;
 }
 
+#contenu .sideBar .contact img:hover,
+#tabbar .tabbar-contact img:hover {
+  animation: shake 0.5s infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0, 0);
+  }
+  25% {
+    transform: translateX(5px);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-5px, -5px);
+  }
+}
+
 
 /* main -> contenu right */
 
@@ -90,29 +125,33 @@ nav .userName .nameBlock span {
   min-height: 15%;
 }
 
-#contenu-right h1{
+#contenu-right h1 {
   font-size: 40px;
   font-weight: 900;
 }
 
-#contenu-right .gestion-item{
+#contenu-right .gestion-item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   margin:15px 0;
-  width: 230px;
+  width: 239px;
   height: 70px;
   border-radius:100px;
 }
+
 #contenu-right .icon {
   align-items: center;
   margin-right: 5px;
-
+}
+#contenu-right .icon img {
+  width: 30px;
+  height: 30px;
 }
 
-#contenu-right .gestion-item p{
+#contenu-right .gestion-item p {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -120,14 +159,19 @@ nav .userName .nameBlock span {
   font-weight: 900;
 }
 
- #contenu-right .gestion-item{
+ #contenu-right .gestion-item {
   color: var(--primary-color);
   border: 1px solid var(--primary-color);
 } 
 
-#contenu-right .gestion-item:hover{
+#contenu-right .gestion-item:hover {
   background-color: var(--primary-color);
   color:#fff;
+  transform: scale(1.1);
+}
+
+#contenu-right .gestion-item:hover .icon img {
+  filter: brightness(0) invert(1);
 }
 
 #contenu-right .triangle {
@@ -145,10 +189,11 @@ nav .userName .nameBlock span {
 
 /* main->rignt->partie de recherche */
 
-.search{
+.search {
   position: relative;
 }
-.search .glass{
+
+.search .glass {
   position:absolute;
   left: -35%;
   top: 50%;
@@ -156,22 +201,22 @@ nav .userName .nameBlock span {
   margin-right: 20px;
 }
 
-.search .glass img{
-  width: 10vw;
-  height:10vw;
+.search .glass img {
+  width: 9vw;
+  height:9vw;
 }
 
-.search h2{
+.search h2 {
   color:var(--primary-color);
   font-weight: 900;
 }
 
-.search .desc{
+.search .desc {
   width: 250px;
   font-size: 14px;
   color:#757575;
 }
-.search input{
+.search input {
   font-size: 16px;
   font-weight: 900;
   border: 1px solid #DDDDDD;
@@ -182,27 +227,28 @@ nav .userName .nameBlock span {
 
 /* ligne de séparation  */
 
-.separator{
+.separator {
   width: 80%;
   height:1px;
   background-color:#E0E0E0;
 }
 
-.max-separator{
+.max-separator {
   margin: 80px auto;
 }
 
-.min-separator{
+.min-separator {
   margin: 10px auto;
 }
 
 /* contenu-> right: info détaillée */
-#persons{
+
+#persons {
  margin-top:-50px;
  margin-bottom: 35%;
 }
 
-#persons .avatar-patient{
+#persons .avatar-patient {
   transform: translateY(20%);
 }
 
@@ -212,15 +258,16 @@ nav .userName .nameBlock span {
   border-radius: 10px;
 }
 
-.card-info.odd{
+.card-info.odd {
   background-color: var(--avatar-bgColor);
+  
 }
 
-.card-info.even{
+.card-info.even {
    border: 2px solid var(--primary-color);
 }
 
-.card-info .top h6{
+.card-info .top h4 {
   font-size: 16px;
   font-weight: bolder;
   color:var(--primary-color);
@@ -240,31 +287,37 @@ nav .userName .nameBlock span {
   margin-right: 10px;
 }
 
-.card-info .base p{
+.card-info .base p {
   font-size: 14px;
   font-weight: bolder;
 }
 
-.card-info .base{
+.card-info .base {
   width:190px;
   height:160px;
 }
-.card-info .base p{
+.card-info .base p {
   font-weight: 900;
 
 } 
 
+/* card animation */
+.card-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s, transform 0.5s;
+}
 
 /* tabbar affiche en bas quand l'écran devient petit */
-#tabbar{
+#tabbar {
   background-color: var(--primary-color);
 }
 
-#tabbar .center{
+#tabbar .center {
   border-left: 1px solid #fff;
 }
 
-#tabbar .right{
+#tabbar .right {
   text-align: center;
   line-height: 100%;
   vertical-align: middle;
@@ -272,15 +325,18 @@ nav .userName .nameBlock span {
   width: 15%;
 }
 
-#tabbar .right .chiffre{
+#tabbar .right .chiffre {
   font-size: 24px;
   font-weight: 900;
 }
 
-#tabber .right .point{
+#tabber .right .point {
   font-weight: 700;
 }
 
+#tabbar .offcanvas {
+  background-color: var(--primary-color);
+}
 
 
 

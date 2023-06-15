@@ -32,52 +32,53 @@ for(let i = 0; i < personsArr.length; i++){
   let cardClass = count % 2 === 0 ? "even" : "odd";
   // créer le template pour les cartes de patients
   html += `
-    <div class="col info d-flex flex-column align-items-center mx-1">
-      <div class="avatar-patient">
-        <img src="${person.avatar}" alt="avatar de patient ${person.name}">
+    <a href="#" class="d-block text-black m-3 link-card">
+      <div class="col d-flex flex-column align-items-center card-animate">
+        <div class="avatar-patient">
+          <img src="${person.avatar}" alt="avatar de patient ${person.name}">
+        </div>
+   
+        <div class="card-info ${cardClass}">
+
+          <div class="top">
+            <h4 class="fw-bolder">${person.name}</h4>
+            <p class="age mt-2">${person.age} ans</p>
+            <div class="separator min-separator"></div>
+          </div>
+
+          <div class="base text-start ms-4 mt-4">
+
+            <div class="info ms-2">
+              <div class="icon me-2">
+                <img src="assets/img/icons/tel.svg" alt="">
+              </div>
+              <p>04 77 36 65 95</p>
+            </div>
+
+            <div class="info align-items-center ms-2">
+              <div class="icon me-2">
+                <img src="assets/img/icons/mail.svg" alt="">
+              </div>
+              <p>cecilemoulin@gmail.com</p>
+            </div>
+
+            <div class="info ms-2">
+              <div class="icon me-2">
+                <img src="assets/img/icons/adress.svg" alt="">
+              </div>
+              <p>16 rue Maurice Bouchor 68007 Lyon</p>
+            </div>
+
+            <div class="info align-items-center ms-2">
+              <div class=" me-2">
+                <img src="assets/img/icons/union-plus.svg" alt="">
+              </div>
+              <p>voir ses ordonnances</p>
+            </div>
+          </div>
       </div>
-
-      <div class="card-info ${cardClass}">
-
-        <div class="top">
-          <h6 class="fw-bolder">${person.name}</h6>
-          <p class="age mt-2">${person.age} ans</p>
-          <div class="separator min-separator"></div>
-        </div>
-
-        <div class="base text-start ms-4 mt-4">
-
-          <div class="info ms-2">
-            <div class="icon me-2">
-              <img src="assets/img/icons/tel.svg" alt="">
-            </div>
-            <p>04 77 36 65 95</p>
-          </div>
-
-          <div class="info align-items-center ms-2">
-            <div class="icon me-2">
-              <img src="assets/img/icons/mail.svg" alt="">
-            </div>
-            <p>cecilemoulin@gmail.com</p>
-          </div>
-
-          <div class="info ms-2">
-            <div class="icon me-2">
-              <img src="assets/img/icons/adress.svg" alt="">
-            </div>
-            <p>16 rue Maurice Bouchor 68007 Lyon</p>
-          </div>
-
-          <div class="info align-items-center ms-2">
-            <div class=" me-2">
-              <img src="assets/img/icons/union-plus.svg" alt="">
-            </div>
-            <p>voir ses ordonnances</p>
-          </div>
-
-        </div>
-    </div>  
-  </div>
+    </div>
+  </a>
   `
   count++
 
@@ -86,6 +87,7 @@ for(let i = 0; i < personsArr.length; i++){
 // insérer le template html dans l'élément avec id "persons"
 const patientList = document.getElementById("persons")
 patientList.innerHTML = html
+
 
 
 

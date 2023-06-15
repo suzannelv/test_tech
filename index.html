@@ -5,6 +5,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
+
+  
   <title>Test site Polo</title>
 </head>
 <body>
@@ -46,8 +51,8 @@
       
       <!-- main left : sidebar -->
       <div class="sideBar col-2 d-none d-md-block pt-5 ps-4 position-relative">
-        <a href="#"><h5 class="mb-4">Accueil</h5></a>
-        <a href="#"><h5 class="mb-4">Mes ordonnances</h5></a>
+        <a href="#"><h3 class="mb-4">Accueil</h3></a>
+        <a href="#"><h3 class="mb-4">Mes ordonnances</h3></a>
       
         <ul class="nav flex-column">
           <!-- premier balise <li> avec le menu déroulant -->
@@ -57,7 +62,7 @@
                 <img src="assets/img/icons/patients.svg" alt="icon connextion">
               </div>
             
-              <a href="#" class="mx-2"><h5 class="toggle-title me-1">Mes patients</h5></a>
+              <a href="#" class="mx-2"><h3 class="toggle-title me-1">Mes patients</h3></a>
 
               <a class="btn d-inline-flex align-items-center collapsed"
                  href="#"    
@@ -65,41 +70,41 @@
                  data-bs-target="#list-collapse" 
                  aria-expanded="true" 
                  onclick="toggleArrow()">
-                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" >
-                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="arrow-close" class="d-none">
+                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" class="ps-3" >
+                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="arrow-close" class="d-none ps-3">
               </a>
             </div>
 
             <div class="collapse" id="list-collapse">
               <ul class="toggle-list text-white py-1">
-                <li>Tous les patients</li>
-                <li>Patients en attente</li>
-                <li>Patients archivés</li>
+                <a href="#"><li>Tous les patients</li></a>
+                <a href="#"><li>Patients en attente</li></a>
+                <a href="#"><li>Patients archivés</li></a>
               </ul>
             </div>
           </li>
 
           <!--deuxième <li>  -->
           <li class="sideBar-item mb-4">
-            <a href="#"><h5>Mes pharmacies</h5></a>
+            <a href="#"><h3>Mes pharmacies</h3></a>
           </li>
 
           <!--troisième <li>  -->
           <li class="sideBar-item d-flex flex-row mb-4">
-            <a href="#"><h5>Mes documents</h5></a>
+            <a href="#"><h3>Mes documents</h3></a>
             <div>
-              <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3">
+              <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3 ps-3">
             </div>
           </li>
 
           <!--quatrième <li>  -->
           <li class="sideBar-item mb-4">
-            <a href="#"><h5>Mes Pilbeez</h5></a>
+            <a href="#"><h3>Mes Pilbeez</h3></a>
           </li>
 
           <!--cinquième <li>  -->
           <li class="sideBar-item">
-            <a href="#"><h5>Parrainer un cabinet</h5></a>
+            <a href="#"><h3>Parrainer un cabinet</h3></a>
           </li>
         </ul>
 
@@ -112,6 +117,9 @@
             <img src="assets/img/icons/contact-mail.svg" alt="contact par email">
           </div>
         </div>
+
+      </div>
+      
       </div>
  
       <!-- main right : contenu principal-->
@@ -121,14 +129,14 @@
           <h1 class="pt-5">Les patients du cabinet</h1>
 
           <div class="d-flex justify-content-center flex-wrap my-4">
-            <div class="gestion-item add-patient">
+            <div class="gestion-item add-patient me-2">
               <div class="icon">
                 <img src="assets/img/icons/ajout-patient.svg" alt="ajouter patient">
               </div> 
               <p>Ajouter un patient</p>
             </div>
   
-            <div class="gestion-item patient-wait mx-2">
+            <div class="gestion-item patient-wait me-2">
               <div class="icon">
                 <img src="assets/img/icons/patient-attente.svg" alt="patients en attente" >
               </div>
@@ -176,7 +184,7 @@
         <div class="separator max-separator"></div> 
 
         <!-- partie sur les cartes des patients -->
-        <div id="persons" class="container d-flex flex-wrap justify-content-center">
+        <div id="persons" class="container-fluid d-flex flex-wrap justify-content-center">
           <div class="patient-list row d-flex"></div>
         </div>
       </div>
@@ -186,9 +194,83 @@
 
 <!-- tabbar affiche sur le petit écran-->
 <div id="tabbar" class="d-block d-md-none d-flex mt-5">
-  <div class="left mx-3 align-self-center">
-    <img src="assets/img/icons/btn.svg" alt="toggle buton">
+  <div class="left mx-3 align-self-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+    <img src="assets/img/icons/btn.svg" alt="toggle buton" id="sidebar-toggle-btn">
   </div>
+
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    <div class="offcanvas-body ms-2">
+      <a href="#"><h3 class="mb-4">Accueil</h3></a>
+      <a href="#"><h3 class="mb-4">Mes ordonnances</h3></a>
+    
+      <ul class="nav flex-column">
+        <!-- premier balise <li> avec le menu déroulant -->
+        <li class="d-flex flex-column align-items-start sideBar-item mb-4">
+          <div class="d-flex flex-row align-items-center">
+            <div class="pt-2">
+              <img src="assets/img/icons/patients.svg" alt="icon connextion">
+            </div>
+          
+            <a href="#" class="mx-2"><h3 class="toggle-title me-1">Mes patients</h3></a>
+
+            <a class="btn d-inline-flex align-items-center collapsed"
+               href="#"    
+               data-bs-toggle="collapse" 
+               data-bs-target="#list-collapse" 
+               aria-expanded="true" 
+               onclick="toggleArrow()">
+              <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" class="ps-3" >
+              <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="arrow-close" class="d-none ps-3">
+            </a>
+          </div>
+
+          <div class="collapse" id="list-collapse">
+            <ul class="toggle-list text-white py-1">
+              <a href="#"><li>Tous les patients</li></a>
+              <a href="#"><li>Patients en attente</li></a>
+              <a href="#"><li>Patients archivés</li></a>
+            </ul>
+          </div>
+        </li>
+
+        <!--deuxième <li>  -->
+        <li class="sideBar-item mb-4">
+          <a href="#"><h3>Mes pharmacies</h3></a>
+        </li>
+
+        <!--troisième <li>  -->
+        <li class="sideBar-item d-flex flex-row mb-4">
+          <a href="#"><h3>Mes documents</h3></a>
+          <div>
+            <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3 ps-3">
+          </div>
+        </li>
+
+        <!--quatrième <li>  -->
+        <li class="sideBar-item mb-4">
+          <a href="#"><h3>Mes Pilbeez</h3></a>
+        </li>
+
+        <!--cinquième <li>  -->
+        <li class="sideBar-item">
+          <a href="#"><h3>Parrainer un cabinet</h3></a>
+        </li>
+      </ul>
+
+
+      <div class="tabbar-contact">
+        <div class="mx-4">
+          <img src="assets/img/icons/contact-tel.svg" alt="contact par téléphone">
+        </div>
+        <div >
+          <img src="assets/img/icons/contact-mail.svg" alt="contact par email">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
 
   <div class="center flex-fill"></div>
 
@@ -201,6 +283,6 @@
   <script type="module" src="assets/js/index.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/toggle.js"></script>
-
+  <script src="assets/js/animation.js"></script>
 </body>
 </html>
