@@ -16,7 +16,7 @@ a {
 
 a:hover,
 a:hover h3 {
-  color:#FFD900 !important;
+  color:black !important;
   transform: scale(1.1);
 }
 
@@ -36,6 +36,7 @@ nav .userName {
   flex-direction: column;
   align-items: flex-end;
 }
+
 nav .userName .nameBlock {
   display: flex;
   flex-direction: column;
@@ -81,7 +82,7 @@ nav .userName .nameBlock span {
 }
 
 #contenu .sideBar .contact,
-.tabbar-contact {
+#tabbar .tabbar-contact {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -116,7 +117,6 @@ nav .userName .nameBlock span {
     transform: translateX(-5px, -5px);
   }
 }
-
 
 /* main -> contenu right */
 
@@ -216,6 +216,7 @@ nav .userName .nameBlock span {
   font-size: 14px;
   color:#757575;
 }
+
 .search input {
   font-size: 16px;
   font-weight: 900;
@@ -259,8 +260,7 @@ nav .userName .nameBlock span {
 }
 
 .card-info.odd {
-  background-color: var(--avatar-bgColor);
-  
+  background-color: var(--avatar-bgColor); 
 }
 
 .card-info.even {
@@ -336,6 +336,9 @@ nav .userName .nameBlock span {
 
 #tabbar .offcanvas {
   background-color: var(--primary-color);
+}
+#tabbar .tabbar-contact {
+ bottom:10px;
 }
 
 
