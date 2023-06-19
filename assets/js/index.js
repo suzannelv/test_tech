@@ -33,7 +33,7 @@ for(let i = 0; i < personsArr.length; i++){
   // créer le template pour les cartes de patients
   html += `
     <a href="#" class="d-block text-black m-3 link-card">
-      <div class="col d-flex flex-column align-items-center card-animate">
+      <div class="d-flex flex-column align-items-center card-animate">
         <div class="avatar-patient">
           <img src="${person.avatar}" alt="avatar de patient ${person.name}">
         </div>
@@ -50,28 +50,28 @@ for(let i = 0; i < personsArr.length; i++){
 
             <div class="info ms-2">
               <div class="icon me-2">
-                <img src="assets/img/icons/tel.svg" alt="">
+                <img src="assets/img/icons/tel.svg" alt="numéro de tél">
               </div>
               <p>04 77 36 65 95</p>
             </div>
 
             <div class="info align-items-center ms-2">
               <div class="icon me-2">
-                <img src="assets/img/icons/mail.svg" alt="">
+                <img src="assets/img/icons/mail.svg" alt="mail">
               </div>
               <p>cecilemoulin@gmail.com</p>
             </div>
 
             <div class="info ms-2">
               <div class="icon me-2">
-                <img src="assets/img/icons/adress.svg" alt="">
+                <img src="assets/img/icons/adresse.svg" alt="adresse">
               </div>
               <p>16 rue Maurice Bouchor 68007 Lyon</p>
             </div>
 
             <div class="info align-items-center ms-2">
               <div class=" me-2">
-                <img src="assets/img/icons/union-plus.svg" alt="">
+                <img src="assets/img/icons/union-plus.svg" alt="voir l'ordonnance">
               </div>
               <p>voir ses ordonnances</p>
             </div>

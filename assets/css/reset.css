@@ -17,7 +17,6 @@ a {
 a:hover,
 a:hover h3 {
   color:black !important;
-  transform: scale(1.1);
 }
 
 img {
@@ -57,10 +56,10 @@ nav .userName .nameBlock span {
 #contenu .sideBar {
   width: 280px;
   height: 100%;
-  background-color: var(--primary-color);
+  background-color: var(--primary-color);  
 }
 
-#contenu .sidebar .sideBar-item {
+#contenu .sideBar .sideBar-item {
   font-size: 16px;
   font-weight:bolder;
 }
@@ -142,15 +141,6 @@ nav .userName .nameBlock span {
   border-radius:100px;
 }
 
-#contenu-right .icon {
-  align-items: center;
-  margin-right: 5px;
-}
-#contenu-right .icon img {
-  width: 30px;
-  height: 30px;
-}
-
 #contenu-right .gestion-item p {
   display: flex;
   align-items: center;
@@ -167,10 +157,9 @@ nav .userName .nameBlock span {
 #contenu-right .gestion-item:hover {
   background-color: var(--primary-color);
   color:#fff;
-  transform: scale(1.1);
 }
 
-#contenu-right .gestion-item:hover .icon img {
+#contenu-right .gestion-item:hover img {
   filter: brightness(0) invert(1);
 }
 
@@ -318,6 +307,8 @@ nav .userName .nameBlock span {
 }
 
 #tabbar .right {
+  position: relative;
+  right:0;
   text-align: center;
   line-height: 100%;
   vertical-align: middle;
@@ -326,11 +317,11 @@ nav .userName .nameBlock span {
 }
 
 #tabbar .right .chiffre {
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: 900;
 }
 
-#tabber .right .point {
+#tabbar .right .point {
   font-weight: 700;
 }
 
@@ -340,6 +331,5 @@ nav .userName .nameBlock span {
 #tabbar .tabbar-contact {
  bottom:10px;
 }
-
 
 
