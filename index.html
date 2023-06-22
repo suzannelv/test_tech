@@ -14,10 +14,10 @@
 
 <!-- header navigateur -->
   <nav class="navbar">
-    <div class="container-fluid d-flex justify-content-between">
+    <div class="container-fluid d-flex justify-content-between py-3 px-1 py-md-4 px-md-5">
       <!-- logo à gauche -->
       <div class="ms-3">
-        <img src="assets/img/logo.svg" alt="logo polo" class="logo">
+        <img src="assets/img/logo.svg" alt="logo polo" id="logo" class="logo">
       </div>
 
       <!-- user login icon à droite -->
@@ -28,7 +28,9 @@
             <span class="firstName">Dufour</span>
           </div>    
         </div>
-        <img src="assets/img/avatars/avatar-infirmier.svg" alt="infirmier" class="mx-2">
+        <a href="#">
+          <img src="assets/img/avatars/avatar-infirmier.svg" alt="infirmier" class="mx-2">
+        </a>
         <img src="assets/img/icons/arrow-down.svg" alt="flèche" class="pt-2 d-none d-md-block">
       </div>
     </div>
@@ -37,34 +39,92 @@
 <!-- main contenu -->
 
   <main id="contenu" class="container-fluid d-flex">
-    <div class="row g-0">    
+    <div class="row g-0 d-none d-md-block">    
         <!-- main left : sidebar -->
-      <div class="sideBar col-2 d-none d-md-block pt-5 ps-4 position-relative"></div>
+      <div class="sideBar pt-5 ps-4 position-relative">
+        <h3 class="mb-4"><a href="#">Accueil</a></h3>
+        <h3 class="mb-4"><a href="#">Mes ordonnances</a></h3>
+
+        <ul class="nav flex-column">
+          <li class="d-flex flex-column align-items-start sideBar-item mb-4">
+            <div class="d-flex flex-row align-items-center">
+              <img src="assets/img/icons/patients.svg" alt="icon connexion">
+              <h3 class="toggle-title me-1"><a href="#" class="mx-2">Mes patients</a></h3>
+
+              <a class="btn d-inline-flex align-items-center collapsed"
+                href="#"    
+                data-bs-toggle="collapse" 
+                data-bs-target="#list-collapse" 
+                aria-expanded="true" 
+                onclick="toggleArrow('arrow-open', 'arrow-close', '.toggle-title')">
+                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" class="ps-3">
+                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="arrow-close" class="d-none ps-3">
+              </a>
+            </div>
+
+            <div class="collapse" id="list-collapse">
+              <ul class="toggle-list text-white py-1">
+                <li><a href="#">Tous les patients</a></li>
+                <li><a href="#">Patients en attente</a></li>
+                <li><a href="#">Patients archivés</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="sideBar-item mb-4">
+            <h3><a href="#">Mes pharmacies</a></h3>
+          </li>
+
+          <li class="sideBar-item d-flex flex-row mb-4">
+            <h3><a href="#">Mes documents</a></h3>
+            <div>
+              <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3 ps-3">
+            </div>
+          </li>
+
+          <li class="sideBar-item mb-4">
+            <a href="#"><h3>Mes Pilbeez</h3></a>
+          </li>
+
+          <li class="sideBar-item">
+            <h3><a href="#">Parrainer un cabinet</a></h3>
+          </li>
+        </ul>
+
+        <div class="contact">
+          <div class="mx-4">
+            <img src="assets/img/icons/contact-tel.svg" alt="contact par téléphone">
+          </div>
+          <div>
+            <img src="assets/img/icons/contact-mail.svg" alt="contact par email">
+          </div>
+        </div>
+      </div>
     </div>
   
     <!-- main right : contenu principal-->
-    <div id="contenu-right" class="col text-center">
+    <div id="contenu-right" class=" text-center">
       <!-- partie les patients du cabinet -->
       <div class="title position-relative">
         <h1 class="pt-5">Les patients du cabinet</h1>
 
-        <div class="d-flex justify-content-center flex-wrap my-4">
-          <div class="gestion-item add-patient me-2">
+        <div class="d-flex justify-content-center flex-wrap my-5">
+          <div class="gestion-item  add-patient px-3 py-2 mx-3 mb-3 col-12 col-md-6 col-lg-3">
             <img src="assets/img/icons/ajout-patient.svg" alt="ajouter patient">
             <p class="mx-1">Ajouter un patient</p>
           </div>
 
-          <div class="gestion-item patient-wait me-2">
+          <div class="gestion-item patient-wait px-3 py-2 mx-3 mb-3 col-12 col-md-6 col-lg-3">
             <img src="assets/img/icons/patient-attente.svg" alt="patients en attente">
             <p class="mx-1">Patients en attente</p>
           </div>  
 
-          <div class="gestion-item patient-archive">
+          <div class="gestion-item patient-archive px-3 py-2 mx-3 mb-3 col-12 col-md-6 col-lg-3">
             <img src="assets/img/icons/folder.svg" alt="patients archivés">
             <p class="mx-1">Patients archivés</p>
           </div>     
 
-          <div class="gestion-item aidant ms-2"> 
+          <div class="gestion-item aidant mx-3 mb-3 px-3 py-2 col-12 col-md-6 col-lg-3"> 
             <img src="assets/img/icons/hand.svg" alt="voir les aidants">
             <p class="mx-1">Voir les aidants</p>
           </div>
@@ -75,9 +135,9 @@
 
       <!-- partie de recherche -->
       <div class="search row d-flex flex-row align-items-start my-5">
-        <div class="glass d-none d-lg-block">
+        <!-- <div class="glass d-none d-lg-block">
           <img src="assets/img/loupe.svg" alt="icon de recherche">
-        </div>
+        </div> -->
         
         <div class="fonction-search d-flex flex-column align-items-center justify-content-center">
           <h2>Rechercher un patient</h2>
@@ -106,20 +166,77 @@
 
     <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      <div class="offcanvas-body ms-2"></div>
+      <div class="offcanvas-body ms-2">
+        <a href="#"><h3 class="mb-4">Accueil</h3></a>
+        <a href="#"><h3 class="mb-4">Mes ordonnances</h3></a>
+
+        <ul class="nav flex-column">
+          <li class="d-flex flex-column align-items-start sideBar-item mb-4">
+            <div class="d-flex flex-row align-items-center">
+              <img src="assets/img/icons/patients.svg" alt="icon connexion">
+              <a href="#" class="mx-2"><h3 class="toggle-title me-1">Mes patients</h3></a>
+
+              <a class="btn d-inline-flex align-items-center collapsed"
+                href="#"    
+                data-bs-toggle="collapse" 
+                data-bs-target="#list-collapse" 
+                aria-expanded="true" 
+                onclick="toggleArrow('tabbar-arrow-open', 'tabbar-arrow-close', '.toggle-title')">
+                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="tabbar-arrow-open" class="ps-3">
+                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="tabbar-arrow-close" class="d-none ps-3">
+              </a>
+            </div>
+
+            <div class="collapse" id="list-collapse">
+              <ul class="toggle-list text-white py-1">
+                <li><a href="#">Tous les patients</a></li>
+                <li><a href="#">Patients en attente</a></li>
+                <li><a href="#">Patients archivés</a></li>
+              </ul>
+            </div>
+          </li>
+
+          <li class="sideBar-item mb-4">
+            <a href="#"><h3>Mes pharmacies</h3></a>
+          </li>
+
+          <li class="sideBar-item d-flex flex-row mb-4">
+            <a href="#"><h3>Mes documents</h3></a>
+            <div>
+              <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3 ps-3">
+            </div>
+          </li>
+
+          <li class="sideBar-item mb-4">
+            <a href="#"><h3>Mes Pilbeez</h3></a>
+          </li>
+
+          <li class="sideBar-item">
+            <a href="#"><h3>Parrainer un cabinet</h3></a>
+          </li>
+        </ul>
+
+        <div class="tabbar-contact contact">
+          <div class="mx-4">
+            <img src="assets/img/icons/contact-tel.svg" alt="contact par téléphone">
+          </div>
+          <div>
+            <img src="assets/img/icons/contact-mail.svg" alt="contact par email">
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="center flex-fill"></div>
     <div class="right">
-      <p class="text-white mt-2 chiffre">1740</p>
+      <p class="text-white mt-3 chiffre">1740</p>
       <p class="text-black fw-bolder point">points</p>
     </div>
   </footer>
   
-  <script type="module" src="assets/js/index.js"></script>
+  <script src="assets/js/index.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/toggle.js"></script>
   <script src="assets/js/animation.js"></script>
-  <script src="./assets/js/menu.js"></script>
 </body>
 </html>

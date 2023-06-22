@@ -1,5 +1,3 @@
-@import "./common.css";
-
 body, h1, h2, h3, h4, h5, h6 {
   padding:0;
   margin:0;
@@ -25,10 +23,6 @@ img {
 
 
 /* header navigateur */
-nav .logo {
-  width: 13vw;
-  height: 6vw;
-}
 
 nav .userName {
   display: flex;
@@ -43,7 +37,7 @@ nav .userName .nameBlock {
 }
 
 nav .userName .nameBlock span {
-  font-size: 14px;
+  font-size: 0.8rem;
   font-weight: 900;
   text-align: right;
 }
@@ -54,24 +48,24 @@ nav .userName .nameBlock span {
   max-width: 100%;
 }
 #contenu .sideBar {
-  width: 280px;
+  width: 270px;
   height: 100%;
   background-color: var(--primary-color);  
 }
 
 #contenu .sideBar .sideBar-item {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight:bolder;
 }
 
 #contenu h3 {
-  font-size: 18px;
+  font-size: 1.1rem;
   font-weight: 900;
 }
 
 #contenu .sideBar .toggle-list {
   margin-left:-13px;
-  font-size: 14px;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 2.5;
 }
@@ -125,28 +119,31 @@ nav .userName .nameBlock span {
 }
 
 #contenu-right h1 {
-  font-size: 40px;
+  font-size: 2.5rem;
   font-weight: 900;
+  color: #363636;
 }
 
 #contenu-right .gestion-item {
   display: flex;
   flex-direction: row;
+  column-gap: 0.7em;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  margin:15px 0;
-  width: 239px;
+  width: 210px;
   height: 70px;
   border-radius:100px;
 }
 
 #contenu-right .gestion-item p {
-  display: flex;
+  /* display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; */
   margin:0;
   font-weight: 900;
+  max-width: 92px;
+  text-align: left;
 }
 
  #contenu-right .gestion-item {
@@ -157,6 +154,7 @@ nav .userName .nameBlock span {
 #contenu-right .gestion-item:hover {
   background-color: var(--primary-color);
   color:#fff;
+  transform: scaleX(1.1);
 }
 
 #contenu-right .gestion-item:hover img {
@@ -179,10 +177,19 @@ nav .userName .nameBlock span {
 /* main->rignt->partie de recherche */
 
 .search {
-  position: relative;
+  /* position: relative; */
+  background-image: url(../img/loupe.svg);
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
 }
 
-.search .glass {
+@media (max-width: 1100px) {
+  .search {
+    background-image: none;
+  }
+}
+
+/* .search .glass {
   position:absolute;
   left: -35%;
   top: 50%;
@@ -193,27 +200,29 @@ nav .userName .nameBlock span {
 .search .glass img {
   width: 9vw;
   height:9vw;
-}
+} */
 
 .search h2 {
   color:var(--primary-color);
+  font-size: 2rem;
   font-weight: 900;
 }
 
 .search .desc {
-  width: 250px;
-  font-size: 14px;
+  max-width: 250px;
+  font-size: 0.9rem;
   color:#757575;
 }
 
 .search input {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 900;
   border: 1px solid #DDDDDD;
   border-radius: 40px;
   width:40%;
   height: 60px ;
 }
+
 
 /* ligne de séparation  */
 
@@ -257,14 +266,14 @@ nav .userName .nameBlock span {
 }
 
 .card-info .top h4 {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bolder;
   color:var(--primary-color);
   margin-top: 50px;
 }
 
 .card-info .top .age {
-  font-size: 14px;
+  font-size: 0.9rem;
 }
 
 .card-info .base .info {
@@ -277,17 +286,16 @@ nav .userName .nameBlock span {
 }
 
 .card-info .base p {
-  font-size: 14px;
-  font-weight: bolder;
+  font-size: 0.7rem;
+  font-weight: bold;
 }
 
 .card-info .base {
-  width:190px;
+  max-width:210px;
   height:160px;
 }
 .card-info .base p {
   font-weight: 900;
-
 } 
 
 /* card animation */
@@ -328,8 +336,6 @@ nav .userName .nameBlock span {
 #tabbar .offcanvas {
   background-color: var(--primary-color);
 }
-#tabbar .tabbar-contact {
- bottom:10px;
-}
+
 
 

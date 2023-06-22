@@ -48,32 +48,32 @@ for(let i = 0; i < personsArr.length; i++){
 
           <div class="base text-start ms-4 mt-4">
 
-            <div class="info ms-2">
-              <div class="icon me-2">
+            <div class="info ms-2 row">
+              <div class="icon me-2 col-2">
                 <img src="assets/img/icons/tel.svg" alt="numéro de tél">
               </div>
-              <p>04 77 36 65 95</p>
+              <p class="col-9">04 77 36 65 95</p>
             </div>
 
-            <div class="info align-items-center ms-2">
-              <div class="icon me-2">
+            <div class="info ms-2 row">
+              <div class="icon me-2 col-2">
                 <img src="assets/img/icons/mail.svg" alt="mail">
               </div>
-              <p>cecilemoulin@gmail.com</p>
+              <p class="col-9">cecilemoulin@gmail.com</p>
             </div>
 
-            <div class="info ms-2">
-              <div class="icon me-2">
+            <div class="info ms-2 row">
+              <div class="icon me-2 col-2">
                 <img src="assets/img/icons/adresse.svg" alt="adresse">
               </div>
-              <p>16 rue Maurice Bouchor 68007 Lyon</p>
+              <p class="col-9">16 rue Maurice Bouchor 68007 Lyon</p>
             </div>
 
-            <div class="info align-items-center ms-2">
-              <div class=" me-2">
+            <div class="info ms-2 row">
+              <div class="icon me-2 col-2">
                 <img src="assets/img/icons/union-plus.svg" alt="voir l'ordonnance">
               </div>
-              <p>voir ses ordonnances</p>
+              <p class="col-9">voir ses ordonnances</p>
             </div>
           </div>
       </div>

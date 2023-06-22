@@ -1,14 +1,19 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Fuzzy+Bubbles&family=Metal&family=Nunito+Sans&family=Poppins:ital,wght@0,400;0,700;0,800;1,600;1,700&family=Roboto:wght@300;400&family=Sofia+Sans&display=swap');
 
 :root{
   --primary-color:#3CE0A0;
   --avatar-bgColor:#E4F4ED;
   --linear-bgColor:#E4F4ED, #F9F9F9;
+}
 
+html {
+  font-size: 16px;
 }
 
 body{
-  font-size: 16px;
   font-family: 'Nunito', sans-serif;
+}
+
+#logo {
+  max-width: 8rem ;
 }
