@@ -70,7 +70,7 @@ for(let i = 0; i < personsArr.length; i++){
             </div>
 
             <div class="info ms-2 row">
-              <div class="icon me-2 col-2">
+              <div class="icon me-2 mt-1 ps-1 col-2">
                 <img src="assets/img/icons/union-plus.svg" alt="voir l'ordonnance">
               </div>
               <p class="col-9">voir ses ordonnances</p>

@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/index.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <title>Test site Polo</title>
@@ -41,7 +42,7 @@
   <main id="contenu" class="container-fluid d-flex">
     <div class="row g-0 d-none d-md-block">    
         <!-- main left : sidebar -->
-      <div class="sideBar pt-5 ps-4 position-relative">
+      <div class="sideBar pt-5 ps-5 position-relative">
         <h3 class="mb-4"><a href="#">Accueil</a></h3>
         <h3 class="mb-4"><a href="#">Mes ordonnances</a></h3>
 
@@ -51,14 +52,14 @@
               <img src="assets/img/icons/patients.svg" alt="icon connexion">
               <h3 class="toggle-title me-1"><a href="#" class="mx-2">Mes patients</a></h3>
 
-              <a class="btn d-inline-flex align-items-center collapsed"
+              <a class="collapsible btn d-inline-flex align-items-center collapsed"
                 href="#"    
                 data-bs-toggle="collapse" 
                 data-bs-target="#list-collapse" 
                 aria-expanded="true" 
-                onclick="toggleArrow('arrow-open', 'arrow-close', '.toggle-title')">
-                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" class="ps-3">
-                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="arrow-close" class="d-none ps-3">
+                >
+                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" class="arrow ps-3 ms-1">
+               
               </a>
             </div>
 
@@ -77,13 +78,11 @@
 
           <li class="sideBar-item d-flex flex-row mb-4">
             <h3><a href="#">Mes documents</a></h3>
-            <div>
-              <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3 ps-3">
-            </div>
+            <img src="assets/img/icons/arrow-bas.svg" alt="icon flèche" class="mt-2 ms-3 ps-4">
           </li>
 
           <li class="sideBar-item mb-4">
-            <a href="#"><h3>Mes Pilbeez</h3></a>
+            <h3><a href="#">Mes Pilbeez</a></h3>
           </li>
 
           <li class="sideBar-item">
@@ -103,11 +102,10 @@
     </div>
   
     <!-- main right : contenu principal-->
-    <div id="contenu-right" class=" text-center">
+    <div id="contenu-right" class="text-center">
       <!-- partie les patients du cabinet -->
       <div class="title position-relative">
-        <h1 class="pt-5">Les patients du cabinet</h1>
-
+        <h1 class="pt-5 mx-auto">Les patients du cabinet</h1>
         <div class="d-flex justify-content-center flex-wrap my-5">
           <a href="#" class="gestion-item add-patient px-3 py-2 mx-3 mb-3 col-12 col-md-6 col-lg-3">
             <img src="assets/img/icons/ajout-patient.svg" alt="ajouter patient">
@@ -134,18 +132,14 @@
       </div>
 
       <!-- partie de recherche -->
-      <div class="search row d-flex flex-row align-items-start my-5">
-        <!-- <div class="glass d-none d-lg-block">
-          <img src="assets/img/loupe.svg" alt="icon de recherche">
-        </div> -->
-        
-        <div class="fonction-search d-flex flex-column align-items-center justify-content-center">
+      <div class="search row d-flex flex-row justify-content-center my-5 px-4">
+        <div class="fonction-search d-flex flex-column align-items-center">
           <h2>Rechercher un patient</h2>
           <div class="my-3 desc">
             <small >Entrez les premières lettres de nom du patient que vous recherchez.</small>
           </div>
           <div class="input-group">
-            <input type="text" class="text-center mx-auto" placeholder="Koscians!" aria-label="saisir le nom de patient"/>
+            <input type="text" class="text-center mx-auto" placeholder="Koscians!" aria-label="saisir le nom de patient">
           </div>    
         </div>
       </div>    
@@ -160,7 +154,7 @@
 
 <!-- tabbar affiche sur le petit écran-->
   <footer id="tabbar" class="d-block d-md-none d-flex mt-5">
-    <div class="left mx-3 align-self-center" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
+    <div class="left mx-3 align-self-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
       <img src="assets/img/icons/btn.svg" alt="toggle buton">
     </div>
 
@@ -176,18 +170,17 @@
               <img src="assets/img/icons/patients.svg" alt="icon connexion">
               <a href="#" class="mx-2"><h3 class="toggle-title me-1">Mes patients</h3></a>
 
-              <a class="btn d-inline-flex align-items-center collapsed"
+              <a class="collapsible btn d-inline-flex align-items-center collapsed"
                 href="#"    
                 data-bs-toggle="collapse" 
-                data-bs-target="#list-collapse" 
+                data-bs-target="#list-mobile-collapse" 
                 aria-expanded="true" 
-                onclick="toggleArrow('tabbar-arrow-open', 'tabbar-arrow-close', '.toggle-title')">
-                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="tabbar-arrow-open" class="ps-3">
-                <img src="assets/img/icons/arrow-top.svg" alt="flèche top" id="tabbar-arrow-close" class="d-none ps-3">
+              >
+                <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" class="arrow ps-3">
               </a>
             </div>
 
-            <div class="collapse" id="list-collapse">
+            <div class="collapse" id="list-mobile-collapse">
               <ul class="toggle-list text-white py-1">
                 <li><a href="#">Tous les patients</a></li>
                 <li><a href="#">Patients en attente</a></li>
@@ -236,7 +229,6 @@
   
   <script src="assets/js/index.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/toggle.js"></script>
   <script src="assets/js/animation.js"></script>
 </body>
 </html>
