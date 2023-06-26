@@ -29,19 +29,14 @@ nav .userName .nameBlock span {
   background-color: var(--primary-color);  
 }
 
-.sideBar .sideBar-item {
-  font-size: 1rem;
-  font-weight:900;
-}
-
 #contenu h3 {
-  font-size: 1.1rem;
+  font-size: 1.125rem;
   font-weight: 900;
 }
 
 #contenu .sideBar .toggle-list {
   margin-left:-13px;
-  font-size: 0.9rem;
+  font-size: 0.75rem;
   font-weight: 900;
   line-height: 2.5;
 }
@@ -67,7 +62,7 @@ nav .userName .nameBlock span {
 
 @keyframes shake {
   0% {
-    transform: translateX(0, 0);
+    transform: translateX(0);
   }
   25% {
     transform: translateX(5px);
@@ -79,7 +74,7 @@ nav .userName .nameBlock span {
     transform: translateX(5px);
   }
   100% {
-    transform: translateX(-5px, -5px);
+    transform: translateX(-5px);
   }
 }
 
@@ -136,6 +131,7 @@ nav .userName .nameBlock span {
 
 #contenu-right .gestion-item p {
   margin:0;
+  font-size: 1rem;
   font-weight: 900;
   max-width: 92px;
   text-align: left;
@@ -181,13 +177,13 @@ nav .userName .nameBlock span {
 
 .search h2 {
   color:var(--primary-color);
-  font-size: 2rem;
+  font-size: 1.875rem;
   font-weight: 900;
 }
 
 .search .desc {
   max-width: 250px;
-  font-size: 0.9rem;
+  font-size: 0.875rem;
   color:#757575;
 }
 
@@ -225,7 +221,7 @@ nav .userName .nameBlock span {
 
 #persons {
  margin-top:-50px;
- margin-bottom: 35%;
+ margin-bottom: 50%;
 }
 
 #persons .avatar-patient {
@@ -254,7 +250,7 @@ nav .userName .nameBlock span {
 }
 
 .card-info .top .age {
-  font-size: 0.9rem;
+  font-size: 0.875rem;
 }
 
 .card-info .base .info {
@@ -267,7 +263,7 @@ nav .userName .nameBlock span {
 }
 
 .card-info .base p {
-  font-size: 0.8rem;
+  font-size: 0.785rem;
   font-weight: 900;
 }
 
@@ -306,11 +302,12 @@ nav .userName .nameBlock span {
 }
 
 #tabbar .right .chiffre {
-  font-size: 1.8rem;
+  font-size: 1.875rem;
   font-weight: 900;
 }
 
 #tabbar .right .point {
+  font-size: 1rem;
   font-weight: 900;
 }
 

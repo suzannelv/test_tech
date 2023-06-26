@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
   <link rel="stylesheet" href="assets/css/index.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap">
+  <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap"> -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
   <title>Test site Polo</title>
@@ -51,7 +51,6 @@
             <div class="d-flex flex-row align-items-center">
               <img src="assets/img/icons/patients.svg" alt="icon connexion">
               <h3 class="toggle-title me-1"><a href="#" class="mx-2">Mes patients</a></h3>
-
               <a class="collapsible btn d-inline-flex align-items-center collapsed"
                 href="#"    
                 data-bs-toggle="collapse" 
@@ -59,10 +58,9 @@
                 aria-expanded="true" 
                 >
                 <img src="assets/img/icons/arrow-bas.svg" alt="flèche bas" id="arrow-open" class="arrow ps-3 ms-1">
-               
               </a>
             </div>
-
+            
             <div class="collapse" id="list-collapse">
               <ul class="toggle-list text-white py-1">
                 <li><a href="#">Tous les patients</a></li>
@@ -154,11 +152,11 @@
 
 <!-- tabbar affiche sur le petit écran-->
   <footer id="tabbar" class="d-block d-md-none d-flex mt-5">
-    <div class="left mx-3 align-self-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">
-      <img src="assets/img/icons/btn.svg" alt="toggle buton">
+    <div class="left mx-3 align-self-center justify-content-center" data-bs-toggle="offcanvas" data-bs-target="#offcanvas">
+      <img src="assets/img/icons/btn.svg" alt="toggle buton" class="mx-auto">
     </div>
 
-    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvas">
       <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       <div class="offcanvas-body ms-2">
         <a href="#"><h3 class="mb-4">Accueil</h3></a>
@@ -190,7 +188,7 @@
           </li>
 
           <li class="sideBar-item mb-4">
-           <h3> <a href="#">Mes pharmacies</a></h3>
+           <h3><a href="#">Mes pharmacies</a></h3>
           </li>
 
           <li class="sideBar-item d-flex flex-row mb-4">
@@ -205,7 +203,7 @@
           </li>
 
           <li class="sideBar-item">
-           <h3> <a href="#">Parrainer un cabinet</a></h3>
+           <h3><a href="#">Parrainer un cabinet</a></h3>
           </li>
         </ul>
 
@@ -223,7 +221,7 @@
     <div class="center flex-fill"></div>
     <div class="right">
       <p class="text-white mt-3 chiffre">1740</p>
-      <p class="text-black fw-bolder point">points</p>
+      <p class="text-black point">points</p>
     </div>
   </footer>
   
